@@ -15,7 +15,8 @@ class App extends Component {
   config = {
     pages: [
       'pages/commodityContainer/index',
-      'pages/cartContainer/index'
+      'pages/cartContainer/index',
+      'pages/commodityDetailContainer/index'
     ],
     window: {
       backgroundTextStyle: 'light',
