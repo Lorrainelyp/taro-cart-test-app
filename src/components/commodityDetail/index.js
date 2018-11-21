@@ -7,18 +7,11 @@ export default class CommodityDetail extends Component {
   constructor () {
     super(...arguments)
     this.state = {
-      goodDetail:{}
     }
   }
 
   componentWillMount () {
-    Taro.getStorage({
-      key:'goodDetail'
-    }).then(res=>{
-      this.setState({
-        goodDetail:res.data
-      })
-    })
+
   }
 
   componentDidMount () {
@@ -29,23 +22,26 @@ export default class CommodityDetail extends Component {
   }
 
   componentWillUnmount () {
-    Taro.removeStorage({key:'goodDetail'})
   }
 
   componentDidShow () { }
 
   componentDidHide () { }
 
+  onClick(){
+    console.log(1111)
+  }
+
 
   render () {
-    const { goodDetail } = this.state
+    const { goodDetail,onHandleAddCart } = this.props
     return (
       <View className='commodity'>
         <Text>{goodDetail.name}</Text>
         <Image src={goodDetail.picUrl}/>
         <Text>{`商品Id:${goodDetail.id}`}</Text>
         <Text>{`库存：${goodDetail.stockCount}`}</Text>
-        <Button onClick={this.props.addToCart.bind(this)} disabled={!goodDetail.stockCount}>{goodDetail.stockCount>0?'加入购物车':'售罄'}</Button>
+        <Button onClick={onHandleAddCart} disabled={!goodDetail.stockCount}>{goodDetail.stockCount>0?'加入购物车':'售罄'}</Button>
       </View>
     )
   }

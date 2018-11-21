@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Button } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import { AtList, AtListItem } from 'taro-ui'
 import './index.scss'
 
@@ -12,8 +12,7 @@ export default class Commodity extends Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    console.log(this.props)
-    console.log(nextProps)
+
   }
 
   componentWillUnmount () { }

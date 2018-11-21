@@ -1,208 +1,22 @@
 import * as type from '../constants/goods'
 
-const goodsData=[
-  {
-    "id": 104817,
-    "createTime": "2016-11-09 10:09:34",
-    "updateTime": "2018-03-12 00:55:56",
-    "state": 0,
-    "name": "薰衣草 干花 装饰",
-    "price": 20,
-    "costPrice": 2,
-    "picUrl": "https://img.alicdn.com/bao/uploaded/i1/27606490/TB2AawRXRLxQeBjy0FnXXcQwpXa_!!27606490.jpg",
-    "url": "http://item.taobao.com/item.htm?id=537271545121",
-    "cId": 124488006,
-    "itemId": 537271545121,
-    "salesCount": 2,
-    "weight": 0,
-    "consumptionCycle": null,
-    "stockCount": 786,
-    "propertyRemark": "",
-    "category": 200
-  },
-  {
-    "id": 104825,
-    "createTime": "2016-11-09 10:09:34",
-    "updateTime": "2018-03-02 08:48:44",
-    "state": 0,
-    "name": "1112",
-    "price": 20,
-    "costPrice": 80.23,
-    "picUrl": "https://img.alicdn.com/bao/uploaded/i3/27606490/TB2FecOXGnyQeBjSspeXXa8WpXa_!!27606490.jpg",
-    "url": "http://item.taobao.com/item.htm?id=537229506775",
-    "cId": 124488006,
-    "itemId": 537229506775,
-    "salesCount": 688,
-    "weight": 3322,
-    "consumptionCycle": 23,
-    "stockCount": 11,
-    "propertyRemark": "15wgeg消耗周期消耗周期消耗周期",
-    "category": 200
-  },
-  {
-    "id": 104820,
-    "createTime": "2016-11-09 10:09:34",
-    "updateTime": "2018-01-30 03:20:25",
-    "state": 0,
-    "name": "莲花瓣 干花 装饰",
-    "price": 20,
-    "costPrice": 6,
-    "picUrl": "https://img.alicdn.com/bao/uploaded/i2/27606490/TB2wHkMXPzyQeBjy0FeXXbwyFXa_!!27606490.jpg",
-    "url": "http://item.taobao.com/item.htm?id=537271333058",
-    "cId": 124488006,
-    "itemId": 537271333058,
-    "salesCount": 5,
-    "weight": 0,
-    "consumptionCycle": 4,
-    "stockCount": 2,
-    "propertyRemark": "",
-    "category": 200
-  },
-  {
-    "id": 104814,
-    "createTime": "2016-11-09 10:09:34",
-    "updateTime": "2018-01-30 03:20:22",
-    "state": 0,
-    "name": "白雏菊 鲜花 插花 装饰",
-    "price": 20,
-    "costPrice": 3.5,
-    "picUrl": "https://img.alicdn.com/bao/uploaded/i3/27606490/TB2R.8bXAWM.eBjSZFhXXbdWpXa_!!27606490.jpg",
-    "url": "http://item.taobao.com/item.htm?id=540017018737",
-    "cId": 124488006,
-    "itemId": 540017018737,
-    "salesCount": 4,
-    "weight": 0,
-    "consumptionCycle": null,
-    "stockCount": 21,
-    "propertyRemark": "",
-    "category": 202
-  },
-  {
-    "id": 104815,
-    "createTime": "2016-11-09 10:09:34",
-    "updateTime": "2018-01-30 03:20:18",
-    "state": 0,
-    "name": "捧花 鲜花 写真",
-    "price": 20,
-    "costPrice": 5,
-    "picUrl": "https://img.alicdn.com/bao/uploaded/i1/27606490/TB2Z5hXXA1M.eBjSZFOXXc0rFXa_!!27606490.jpg",
-    "url": "http://item.taobao.com/item.htm?id=540016433772",
-    "cId": 124488006,
-    "itemId": 540016433772,
-    "salesCount": 88,
-    "weight": 0,
-    "consumptionCycle": null,
-    "stockCount": 57,
-    "propertyRemark": "",
-    "category": 200
-  },
-  {
-    "id": 104816,
-    "createTime": "2016-11-09 10:09:34",
-    "updateTime": "2018-01-30 03:20:15",
-    "state": 0,
-    "name": "捧花 婚礼 写真",
-    "price": 20,
-    "costPrice": 1,
-    "picUrl": "https://img.alicdn.com/bao/uploaded/i1/27606490/TB2cLkJXmGI.eBjSspcXXcVjFXa_!!27606490.jpg",
-    "url": "http://item.taobao.com/item.htm?id=540014204509",
-    "cId": 124488006,
-    "itemId": 540014204509,
-    "salesCount": 2,
-    "weight": 0,
-    "consumptionCycle": null,
-    "stockCount": 21,
-    "propertyRemark": "",
-    "category": 202
-  },
-  {
-    "id": 104818,
-    "createTime": "2016-11-09 10:09:34",
-    "updateTime": "2018-01-30 03:20:12",
-    "state": 0,
-    "name": "干草 干花 装饰",
-    "price": 5,
-    "costPrice": 8,
-    "picUrl": "https://img.alicdn.com/bao/uploaded/i3/27606490/TB2aHwPXPnyQeBjSspiXXb2QpXa_!!27606490.jpeg",
-    "url": "http://item.taobao.com/item.htm?id=537310032562",
-    "cId": 124488006,
-    "itemId": 537310032562,
-    "salesCount": 3,
-    "weight": 0,
-    "consumptionCycle": null,
-    "stockCount": 6,
-    "propertyRemark": "",
-    "category": 201
-  },
-  {
-    "id": 104823,
-    "createTime": "2016-11-09 02:09:34",
-    "updateTime": "2018-01-30 03:20:07",
-    "state": 0,
-    "name": "雏菊 干花 装饰",
-    "price": 20,
-    "costPrice": 6,
-    "picUrl": "https://img.alicdn.com/bao/uploaded/i1/27606490/TB2ougLXR6xQeBjSsziXXXxVVXa_!!27606490.jpg",
-    "url": "http://item.taobao.com/item.htm?id=537270489559",
-    "cId": 124488006,
-    "itemId": 537270489559,
-    "salesCount": 9,
-    "weight": 0.2055,
-    "consumptionCycle": 2,
-    "stockCount": 8,
-    "propertyRemark": "",
-    "category": 203
-  },
-  {
-    "id": 104822,
-    "createTime": "2016-11-09 10:09:34",
-    "updateTime": "2018-01-30 03:20:03",
-    "state": 0,
-    "name": "小粉花 干花 装饰",
-    "price": 20,
-    "costPrice": 8,
-    "picUrl": "https://img.alicdn.com/bao/uploaded/i4/27606490/TB2cOwLXGnyQeBjy1zkXXXmyXXa_!!27606490.jpeg",
-    "url": "http://item.taobao.com/item.htm?id=537230270249",
-    "cId": 124488006,
-    "itemId": 537230270249,
-    "salesCount": 9,
-    "weight": 0.25,
-    "consumptionCycle": null,
-    "stockCount": 3,
-    "propertyRemark": "",
-    "category": 200
-  },
-  {
-    "id": 104821,
-    "createTime": "2016-11-09 10:09:34",
-    "updateTime": "2018-01-30 03:20:01",
-    "state": 0,
-    "name": "芦苇 干花 装饰",
-    "price": 5,
-    "costPrice": 7,
-    "picUrl": "https://img.alicdn.com/bao/uploaded/i4/27606490/TB219wMXNvxQeBjy0FiXXXioXXa_!!27606490.jpg",
-    "url": "http://item.taobao.com/item.htm?id=537270773916",
-    "cId": 124488006,
-    "itemId": 537270773916,
-    "salesCount": 354,
-    "weight": 0,
-    "consumptionCycle": null,
-    "stockCount": 2,
-    "propertyRemark": "",
-    "category": 201
+const INITIAL_STATE = {}
+const decreaseInventory=(good)=>{
+  return {
+    ...good,
+    stockCount:good.stockCount-1
   }
-]
-
-const INITIAL_STATE = {
-  goods: {}
 }
 
 export default function goods (state = INITIAL_STATE, action) {
   switch (action.type) {
     case type.FETCH_GOODSDATA:
+      return Object.assign({},action.goods)
+    case type.ADD_TO_CART:
+      const { goodId } = action
       return {
         ...state,
-        goods:goodsData
+        [goodId]:decreaseInventory(state[goodId])
       }
     default:
       return state

@@ -8,14 +8,14 @@ import './index.scss'
 
 function mapStateToProps(state) {
   return {
-    goods:state.goods
+    goods:state
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    fetchGoodsList(){
-      dispatch(fetchGoodsList())
+    fetchGoodsList(goods){
+      dispatch(fetchGoodsList(goods))
     }
   }
 }
@@ -30,7 +30,6 @@ class CommodityContainer extends Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    console.log(this.props, nextProps)
   }
 
   componentWillUnmount () { }
