@@ -2,7 +2,7 @@ import '@tarojs/async-await'
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
 
-import Index from './pages/index'
+import CommodityContainer from './pages/commodityContainer'
 
 import configStore from './store'
 
@@ -14,13 +14,34 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index'
+      'pages/commodityContainer/index',
+      'pages/cartContainer/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      color: '#7A7E83',
+      selectedColor: '#3cc51f',
+      borderStyle: 'black',
+      backgroundColor: '#ffffff',
+      list: [
+        {
+          pagePath: 'pages/commodityContainer/index',
+          iconPath: 'static/image/commodity_off.png',
+          selectedIconPath: 'static/image/commodity_on.png',
+          text: '商品'
+        },
+        {
+          pagePath: 'pages/cartContainer/index',
+          iconPath: 'static/image/my_off.png',
+          selectedIconPath: 'static/image/my_on.png',
+          text: '购物车'
+        }
+      ]
     }
   }
 
@@ -39,7 +60,7 @@ class App extends Component {
   render () {
     return (
       <Provider store={store}>
-        <Index />
+        <CommodityContainer />
       </Provider>
     )
   }

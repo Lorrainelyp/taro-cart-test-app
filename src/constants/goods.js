@@ -1,0 +1,1 @@
+export const FETCH_GOODSDATA = 'FETCH_GOODSDATA'

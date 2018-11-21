@@ -78,7 +78,7 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@tarojs/async-await@^1.1.4":
+"@tarojs/async-await@^1.1.9":
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/@tarojs/async-await/-/async-await-1.1.9.tgz#47d53dfb5006072318b8471b3650a18992d7032e"
   dependencies:
@@ -94,7 +94,7 @@
     omit.js "^1.0.0"
     weui "^1.1.2"
 
-"@tarojs/plugin-babel@^1.1.4":
+"@tarojs/plugin-babel@^1.1.9":
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/@tarojs/plugin-babel/-/plugin-babel-1.1.9.tgz#601ad90d5dac0873cd6e61b718718018c830669c"
   dependencies:
@@ -129,7 +129,7 @@
     prop-types "^15.6.1"
     redux "^4.0.0"
 
-"@tarojs/redux@^1.1.4":
+"@tarojs/redux@^1.1.9":
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/@tarojs/redux/-/redux-1.1.9.tgz#fa97e7a7a9bbe2f342a30326d3834c80ff0d22de"
   dependencies:
@@ -169,7 +169,7 @@
     lodash "^4.17.10"
     prop-types "^15.6.1"
 
-"@tarojs/taro-weapp@^1.1.4":
+"@tarojs/taro-weapp@^1.1.9":
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/@tarojs/taro-weapp/-/taro-weapp-1.1.9.tgz#f284d19e4f7b1c80731e87f1b3bb39afde4a3937"
   dependencies:
@@ -1557,7 +1557,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5:
+classnames@^2.2.5, classnames@^2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
@@ -5796,6 +5796,14 @@ tar@^4:
     mkdirp "^0.5.0"
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
+
+taro-ui@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/taro-ui/-/taro-ui-1.4.0.tgz#520005537ffa4f9943ce3e2e396d8808443d7e29"
+  dependencies:
+    classnames "^2.2.6"
+    lodash "^4.17.10"
+    prop-types "^15.6.2"
 
 terser-webpack-plugin@^1.1.0:
   version "1.1.0"
