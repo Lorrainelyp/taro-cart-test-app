@@ -1,6 +1,5 @@
 import {
-  FETCH_GOODSDATA,
-  ADD_TO_CART
+  FETCH_GOODSDATA
 } from '../constants/goods'
 
 export const fetchGoodsList = () => {
@@ -107,12 +106,7 @@ export const fetchGoodsList = () => {
   }
 }
 
-export const addToCart = (good) => {
-  return {
-    type: ADD_TO_CART,
-    good
-  }
-}
+
 
 
 

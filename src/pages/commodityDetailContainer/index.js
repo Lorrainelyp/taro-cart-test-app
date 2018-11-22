@@ -2,13 +2,12 @@ import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 import CommodityDetail from '../../components/commodityDetail'
-import {addToCart} from '../../actions/goods'
+import {addToCart} from '../../actions/cart'
 
 import './index.scss'
 
 function mapStateToProps(state) {
   return {
-    goods:state.goods,
     cart:state.cart
   }
 }
@@ -53,6 +52,12 @@ class CommodityDetailContainer extends Component {
 
   componentDidHide () { }
 
+  goToCart(){
+    Taro.navigateTo({
+      url:`/pages/cartContainer/index`
+    })
+  }
+
   render () {
     return (
       <View className='commodityDetailContainer'>
@@ -60,6 +65,7 @@ class CommodityDetailContainer extends Component {
           goodDetail={this.state.goodDetail}
           onHandleAddCart={this.props.addToCart.bind(this,this.state.goodDetail)}
         />
+        <View onClick={this.goToCart.bind(this)}>购物车</View>
       </View>
     )
   }

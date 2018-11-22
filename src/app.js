@@ -16,7 +16,8 @@ class App extends Component {
     pages: [
       'pages/commodityContainer/index',
       'pages/cartContainer/index',
-      'pages/commodityDetailContainer/index'
+      'pages/commodityDetailContainer/index',
+      'pages/index/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -37,7 +38,7 @@ class App extends Component {
           text: '商品'
         },
         {
-          pagePath: 'pages/cartContainer/index',
+          pagePath: 'pages/index/index',
           iconPath: 'static/image/my_off.png',
           selectedIconPath: 'static/image/my_on.png',
           text: '购物车'

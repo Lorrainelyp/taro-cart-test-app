@@ -1,5 +1,5 @@
-import * as goodType from '../constants/goods'
-import * as cartType from '../constants/cart'
+import * as type from '../constants/cart'
+import immutable from 'immutable'
 
 const INITIAL_STATE={
   cartGoods:[]
@@ -46,21 +46,22 @@ const minusCartGoodNum=function (state,good) {
 
 export default function cart (state = INITIAL_STATE, action) {
   switch (action.type) {
-    case goodType.ADD_TO_CART:
-      return {
+    case type.ADD_TO_CART:
+      return immutable.fromJS({
         ...state,
         cartGoods:addGoods(state,action.good)
-      }
-    case cartType.ADD_CART_NUM:
-      return {
+      }).toJS()
+
+    case type.ADD_CART_NUM:
+      return immutable.fromJS({
         ...state,
         cartGoods:addCartGoodNum(state,action.cartGood)
-      }
-    case cartType.MINUS_CART_NUM:
-      return {
+      }).toJS()
+    case type.MINUS_CART_NUM:
+      return immutable.fromJS({
         ...state,
         cartGoods:minusCartGoodNum(state,action.cartGood)
-      }
+      }).toJS()
     default:
       return state
   }

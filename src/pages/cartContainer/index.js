@@ -5,54 +5,41 @@ import Cart from '../../components/cart'
 import { minusCartNum,addCartNum } from '../../actions/cart'
 
 import './index.scss'
-
-function mapStateToProps(state) {
-  console.log(state)
-  return {
-    cart:state.cart
+@connect(({ cart }) => ({
+  cart
+}), (dispatch) => ({
+  addCartNum (cartGood) {
+    dispatch(addCartNum(cartGood))
+  },
+  minusCartNum (cartGood) {
+    dispatch(minusCartNum(cartGood))
   }
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    minusCartNum(cartGood){
-      dispatch(minusCartNum(cartGood))
-    },
-    addCartNum(cartGood){
-      dispatch(addCartNum(cartGood))
-    }
-  }
-}
-@connect(mapStateToProps,mapDispatchToProps)
+}))
 class CartContainer extends Component {
   config = {
     navigationBarTitleText: '购物车'
-  }
-
-  constructor(){
-    super(...arguments)
-
   }
 
   componentWillMount(){
   }
 
   componentWillReceiveProps (nextProps) {
+    console.log(nextProps);
   }
 
   componentWillUnmount () { }
 
-  componentDidShow () { }
-
-  componentDidHide () { }
-
-  handleText(){
+  componentDidShow () {
     console.log(111)
   }
 
+  componentDidHide () { }
+
+
 
   render () {
-    const {cart} = this.props
+    console.log(this.props)
+    let {cart} = this.props
     const cartGoodList=cart.cartGoods.map(cartGood=>
       <Cart
         key={cartGood.id}

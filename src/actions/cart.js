@@ -13,3 +13,10 @@ export const minusCartNum = (cartGood) => {
     cartGood
   }
 }
+
+export const addToCart = (good) => {
+  return {
+    type: type.ADD_TO_CART,
+    good
+  }
+}
