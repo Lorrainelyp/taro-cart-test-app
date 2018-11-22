@@ -46,7 +46,7 @@ export default class Cart extends Component {
           note={`库存：${cartGoodItem.stockCount}`}
           arrow='right'
           thumb={cartGoodItem.picUrl}
-          extraText={cartGoodItem.quantity}
+          extraText={cartGoodItem.quantity.toString()}
           onClick = { this.handleGoDetail.bind(this,cartGoodItem.id,cartGoodItem)}
         />
         <Button className='add_btn' onClick={onAddCartNum}>+</Button>

@@ -6,27 +6,19 @@ const INITIAL_STATE={
 
 
 const addGoods=function (state,good){
-  if(!state.cartGoods.length){
-    let newGood={
+  const hasGood = state.cartGoods.some((item)=>{
+    if(item.id===good.id){
+      item.quantity+=1
+      return true
+    }else {
+      return false
+    }
+  })
+  if(!hasGood){
+    state.cartGoods.push({
       ...good,
       quantity:1
-    }
-    state.cartGoods.push(newGood)
-  }else {
-    const hasGood = state.cartGoods.some((item)=>{
-      if(item.id===good.id){
-        item.quantity+=1
-        return true
-      }else {
-        return false
-      }
     })
-    if(!hasGood){
-      state.cartGoods.push({
-        ...good,
-        quantity:1
-      })
-    }
   }
   return state.cartGoods
 }
