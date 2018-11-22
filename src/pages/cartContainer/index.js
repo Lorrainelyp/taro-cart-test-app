@@ -1,36 +1,36 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Button, Text } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
-import Commodity from '../../components/commodity'
-import { fetchGoodsList } from '../../actions/goods'
+import Cart from '../../components/cart'
 
 import './index.scss'
 
 function mapStateToProps(state) {
+  // console.log(state)
   return {
-    goods:state.goods
+    cart:state.cart
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    fetchGoodsList(){
-      dispatch(fetchGoodsList())
-    }
   }
 }
 @connect(mapStateToProps,mapDispatchToProps)
 class CartContainer extends Component {
   config = {
-    navigationBarTitleText: '商品页'
+    navigationBarTitleText: '购物车'
+  }
+
+  constructor(){
+    super(...arguments)
+
   }
 
   componentWillMount(){
-    this.props.fetchGoodsList()
   }
 
   componentWillReceiveProps (nextProps) {
-    console.log(this.props, nextProps)
   }
 
   componentWillUnmount () { }
@@ -39,13 +39,24 @@ class CartContainer extends Component {
 
   componentDidHide () { }
 
+  handleText(){
+    console.log(111)
+  }
+
+
   render () {
-    const { goods } = this.props
+    const {cart} = this.props
+    const cartGoodList=cart.cartGoods.map(cartGood=>
+      <Cart
+        key={cartGood.id}
+        cartGoodItem={cartGood}
+        onAddCartNum={this.props.addCartNum.bind(this,cartGood.id)}
+        onMinusCartNum={this.props.minusCartNum.bind(this,cartGood.id)}
+      />
+    )
     return (
       <View className='commodityContainer'>
-        <Commodity
-          goods={goods}
-        />
+        {cartGoodList}
       </View>
     )
   }

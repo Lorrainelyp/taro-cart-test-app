@@ -8,14 +8,15 @@ import './index.scss'
 
 function mapStateToProps(state) {
   return {
-    goods:state.goods
+    goods:state.goods,
+    cart:state.cart
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    addToCart(goodId){
-      dispatch(addToCart(goodId))
+    addToCart(good){
+      dispatch(addToCart(good))
     }
   }
 }
@@ -57,7 +58,7 @@ class CommodityDetailContainer extends Component {
       <View className='commodityDetailContainer'>
         <CommodityDetail
           goodDetail={this.state.goodDetail}
-          onHandleAddCart={this.props.addToCart.bind(this,this.state.goodDetail.id)}
+          onHandleAddCart={this.props.addToCart.bind(this,this.state.goodDetail)}
         />
       </View>
     )

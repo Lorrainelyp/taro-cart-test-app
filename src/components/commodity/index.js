@@ -9,6 +9,7 @@ export default class Commodity extends Component {
   }
 
   componentDidMount () {
+
   }
 
   componentWillReceiveProps (nextProps) {

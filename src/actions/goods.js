@@ -107,10 +107,10 @@ export const fetchGoodsList = () => {
   }
 }
 
-export const addToCart = (goodId) => {
+export const addToCart = (good) => {
   return {
     type: ADD_TO_CART,
-    goodId
+    good
   }
 }
 
