@@ -38,7 +38,7 @@ class App extends Component {
           text: '商品'
         },
         {
-          pagePath: 'pages/index/index',
+          pagePath: 'pages/cartContainer/index',
           iconPath: 'static/image/my_off.png',
           selectedIconPath: 'static/image/my_on.png',
           text: '购物车'
